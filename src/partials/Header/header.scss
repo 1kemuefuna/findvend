@@ -1,0 +1,14 @@
+.app-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  &__logo-container {
+    width: 140px;
+    &__logo-container__logo {
+      width: 140px;
+    }
+  }
+}

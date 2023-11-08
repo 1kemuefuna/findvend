@@ -1,0 +1,40 @@
+@mixin lightMode {
+    --background-primary: #ffffff;
+    --primary-text: #111111;
+    --secondary-text: #2F3235;
+    --tertiary-text: #FFFFFF;
+    --color-primary: #2884F0;
+    --color-secondary: #111111;
+    --color-danger: #e74444;
+    --color-warn: #f2f619;
+    --color-border: #D3DBE4;
+    --color-input-border: #D3DBE4;
+  }
+  
+  @mixin darkMode {
+    --background-primary: #111111;
+    --primary-text: #FFFFFF;
+    --color-secondary: #FFFFFF;
+    --secondary-text: #C5CDD6;
+    --color-border: #3F4851;
+    --color-input-border: #3F4851;
+  }
+  
+  :root {
+    --primary-font-family: "Poppins", sans-serif;
+    @include lightMode;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @include darkMode;
+    }
+  }
+  
+  .light-mode {
+    @include lightMode;
+  }
+  
+  .dark-mode {
+    @include darkMode;
+  }

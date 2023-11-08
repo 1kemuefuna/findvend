@@ -1,15 +1,19 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import NoMatch from "./pages/NoMatch/NoMatch";
+import Layout from "./partials/Layout/Layout";
+import Result from "./pages/Result/Result";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          VendFinder
-        </h1>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="result" element={<Result />} />
+        <Route path="*" element={<NoMatch />} />
+      </Route>
+    </Routes>
   );
 }
 
