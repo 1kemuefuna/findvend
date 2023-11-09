@@ -13,7 +13,7 @@
     width: 100%;
     padding: 0 0.625rem;
     @include medium {
-      width: 30%;
+      width: 33%;
       padding: 0;
     }
     text-align: center;
@@ -36,6 +36,13 @@
   }
   &__input-wrapper {
     margin-bottom: 0.625rem;
+  }
+  &__map-wrapper {
+    margin-bottom: 0.625rem;
+    width: 100%;
+  }
+  &__map-spinner {
+    margin: 0 auto;
   }
   &__app-input {
     height: 3.625rem;

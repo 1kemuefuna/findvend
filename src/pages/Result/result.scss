@@ -1,0 +1,81 @@
+@import "../../scss/variables";
+@import "../../scss/typography";
+@import "../../scss/breakpoints";
+
+.app-result {
+  padding: 0.625rem 1.25rem;
+  &__title {
+    @include heading-1;
+    color: $primary-text;
+  }
+  &__listbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.9375rem;
+    margin-bottom: 0.625rem;
+    &__map {
+      width: 21.875rem;
+      height: 14.6875rem;
+    }
+    &__details {
+      width: calc(100% - 21.875rem);
+      &__title {
+        @include heading-3;
+        color: $primary-text;
+        margin: 0;
+      }
+      &__subtitle {
+        @include medium-text;
+        color: $primary-text;
+        margin-top: 0.25rem;
+        margin-bottom: 0.625rem;
+      }
+      &__category {
+        @include small-text;
+        color: $primary-text;
+        margin: 0;
+      }
+      &__distance {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        &__box {
+          display: flex;
+          align-items: center;
+          gap: 0.3125rem;
+          &__icon {
+            width: 1.25rem;
+            & img {
+              width: 1.25rem;
+            }
+          }
+          &__title {
+            @include small-text;
+            color: $muted-text;
+            font-weight: 500;
+          }
+        }
+      }
+      &__actions {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        margin-top: 0.625rem;
+        &__message {
+          width: 8.875rem;
+          height: 2.125rem;
+          background-color: transparent;
+          border: 0.0625rem solid $color-secondary;
+          color: $color-secondary;
+          border-radius: 0.625rem;
+        }
+        &__call {
+          width: 8.875rem;
+          height: 2.125rem;
+          border-radius: 0.625rem;
+        }
+      }
+    }
+  }
+}
