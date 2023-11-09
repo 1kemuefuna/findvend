@@ -12,7 +12,11 @@
   }
   &__link {
     @include medium-text;
-    color: $color-primary;
+    color: $secondary-text;
     text-decoration: none;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: $color-primary;
+    }
   }
 }

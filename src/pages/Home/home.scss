@@ -1,0 +1,53 @@
+@import "../../scss/variables";
+@import "../../scss/typography";
+@import "../../scss/breakpoints";
+
+.app-home {
+  border: 0rem solid red;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__inner-contain {
+    width: 100%;
+    padding: 0 0.625rem;
+    @include medium {
+      width: 30%;
+      padding: 0;
+    }
+    text-align: center;
+  }
+  &__title {
+    @include heading-1;
+    color: $primary-text;
+    margin: 0;
+  }
+  &__subtitle {
+    @include medium-text;
+    color: $secondary-text;
+    text-align: center;
+  }
+  &__form-content {
+    width: 100%;
+  }
+  &__form-content-input {
+    width: 100%;
+  }
+  &__input-wrapper {
+    margin-bottom: 0.625rem;
+  }
+  &__app-input {
+    height: 3.625rem;
+  }
+  &__btn {
+    border-radius: 0.625rem;
+    height: 3.625rem;
+    background-color: $color-primary !important;
+    text-align: center;
+  }
+  &__progress {
+    margin: 0 auto;
+    border-top-color: $color-static-white !important;
+  }
+}

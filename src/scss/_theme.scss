@@ -3,12 +3,15 @@
     --primary-text: #111111;
     --secondary-text: #2F3235;
     --tertiary-text: #FFFFFF;
+    --muted-text: #A7AEB5;
     --color-primary: #2884F0;
     --color-secondary: #111111;
     --color-danger: #e74444;
     --color-warn: #f2f619;
     --color-border: #D3DBE4;
     --color-input-border: #D3DBE4;
+    --color-disabled-input: #E2EBF5;
+    --color-static-white: #FFFFFF;
   }
   
   @mixin darkMode {
@@ -16,8 +19,10 @@
     --primary-text: #FFFFFF;
     --color-secondary: #FFFFFF;
     --secondary-text: #C5CDD6;
+    --muted-text: #8A939C;
     --color-border: #3F4851;
     --color-input-border: #3F4851;
+    --color-disabled-input: #282829;
   }
   
   :root {

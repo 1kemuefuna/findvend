@@ -1,0 +1,58 @@
+@import "../../scss/typography";
+@import "../../scss/variables";
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  border: 0.125rem solid $color-input-border;
+  border-radius: 0.625rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  padding: 0.6rem 0.5rem;
+
+  &:focus-within {
+    border-color: $color-secondary;
+  }
+
+  &.input-disabled {
+    background: $color-disabled-input;
+  }
+
+  &.input-error {
+    border-color: $color-danger;
+  }
+
+  &__input {
+    @include medium-text;
+    outline: none;
+    background: none;
+    border: none;
+    color: $primary-text;
+    width: 100%;
+    &::placeholder {
+      color: $muted-text;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: $primary-text;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &__prefix-icon,
+  &__suffix-icon {
+    line-height: 0;
+    color: $muted-text;
+    svg {
+      fill: $muted-text;
+      height: auto;
+      width: auto;
+    }
+  }
+}
