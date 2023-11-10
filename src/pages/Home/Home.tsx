@@ -7,6 +7,7 @@ import { SERVICES } from "./data";
 import { Button } from "../../components/Button";
 import { CircularProgress } from "../../components/CircularProgress";
 import MapComponent from "../../components/Map";
+import { Category, categories as AppCatrgoies } from "../../data/category";
 
 interface Location {
   latitude: number | null;
@@ -16,26 +17,10 @@ interface Location {
   address?: string;
 }
 
-interface Category {
-  id: number;
-  title: string;
-}
-
-const categoriesData: Category[] = [
-  {
-    id: 1,
-    title: "Home Services",
-  },
-  {
-    id: 2,
-    title: "Technology",
-  },
-];
-
 const Home = () => {
   const [clicked, setClicked] = useState(false);
   const [category, setCategory] = useState<Category>();
-  const [categories, setCategories] = useState<Category[]>(categoriesData);
+  const [categories, setCategories] = useState<Category[]>(AppCatrgoies);
   const [location, setLocation] = useState<Location>();
   const navigate = useNavigate();
   const [loadingLocation, setLoadingLocation] = useState(false);

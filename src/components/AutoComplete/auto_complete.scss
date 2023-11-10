@@ -10,7 +10,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 150px;
+    max-height: 150px;
     overflow-y: auto;
     border: 1px solid $color-border;
     border-radius: 4px;
