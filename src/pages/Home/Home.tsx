@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./home.scss";
 import { Input } from "../../components/Input";
 import { AutoComplete } from "../../components/AutoComplete";
-import { SERVICES } from "./data";
 import { Button } from "../../components/Button";
 import { CircularProgress } from "../../components/CircularProgress";
 import MapComponent from "../../components/Map";
@@ -18,7 +17,6 @@ interface Location {
 }
 
 const Home = () => {
-  const [clicked, setClicked] = useState(false);
   const [category, setCategory] = useState<Category>();
   const [categories, setCategories] = useState<Category[]>(AppCatrgoies);
   const [location, setLocation] = useState<Location>();
@@ -73,7 +71,6 @@ const Home = () => {
 
   const handleSearch = () => {
     if (category && location) {
-      setClicked(true);
       navigate(
         `/result?cat=${category.id}&latitude=${location.latitude}&longitude=${location.longitude}`
       );

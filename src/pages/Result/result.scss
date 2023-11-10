@@ -12,14 +12,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 0.9375rem;
-    margin-bottom: 0.625rem;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-bottom: 2.5rem;
+    @include medium {
+      flex-direction: row;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
     &__map {
       width: 21.875rem;
-      height: 14.6875rem;
     }
     &__details {
-      width: calc(100% - 21.875rem);
+      width: 100%;
+      @include medium {
+        width: calc(100% - 21.875rem);
+      }
       &__title {
         @include heading-3;
         color: $primary-text;

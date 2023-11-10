@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./result.scss";
 import { Button } from "../../components/Button";
 import MapComponent from "../../components/Map";
@@ -21,7 +20,6 @@ const Result = () => {
   const [filteredVendors, setFilteredVendors] = useState<VendorWithDistance[]>(
     []
   );
-  const [loadingLocation, setLoadingLocation] = useState(false);
   const [query] = useSearchParams();
 
   const handleSelectLocation = (
@@ -29,7 +27,6 @@ const Result = () => {
     longitude: number,
     categoryId: number
   ) => {
-    setLoadingLocation(true);
     const servicesWithDistance = vendors.map((s) => {
       const distance = calculateDistance(
         latitude,
@@ -68,8 +65,6 @@ const Result = () => {
     lat2: number,
     lon2: number
   ): number => {
-    // Implementation of distance calculation (you can use Haversine formula)
-    // This is a basic example, you might want to use a library for accurate calculations
     const R = 6371; // Earth radius in kilometers
     const dLat = deg2rad(lat2 - lat1);
     const dLon = deg2rad(lon2 - lon1);
@@ -89,8 +84,6 @@ const Result = () => {
   };
 
   const calculateTimeByWalk = (distance: number): string => {
-    // Implementation of time calculation for walking
-    // You might want to use a more accurate method based on walking speed
     const walkingSpeed = 5; // Assume walking speed in km/h
     const timeInHours = distance / walkingSpeed;
     const timeInMinutes = timeInHours * 60;
@@ -98,8 +91,6 @@ const Result = () => {
   };
 
   const calculateTimeByDriving = (distance: number): string => {
-    // Implementation of time calculation for driving
-    // You might want to use a more accurate method based on driving speed
     const drivingSpeed = 30; // Assume driving speed in km/h
     const timeInHours = distance / drivingSpeed;
     const timeInMinutes = timeInHours * 60;
@@ -107,8 +98,6 @@ const Result = () => {
   };
 
   const calculateTimeByCycling = (distance: number): string => {
-    // Implementation of time calculation for cycling
-    // You might want to use a more accurate method based on cycling speed
     const cyclingSpeed = 15; // Assume cycling speed in km/h
     const timeInHours = distance / cyclingSpeed;
     const timeInMinutes = timeInHours * 60;
