@@ -1,10 +1,10 @@
 # Contribution Guidelines
 
-We appreciate your interest in contributing to GeoVendor Finder! Before you get started, please take a moment to review our contribution guidelines.
+We appreciate your interest in contributing to findvend! Before you get started, please take a moment to review our contribution guidelines.
 
 ## Bug Reports
 
-If you encounter any bugs or unexpected behavior while using GeoVendor Finder, please help us by submitting a detailed bug report. Include the following information in your report:
+If you encounter any bugs or unexpected behavior while using findvend, please help us by submitting a detailed bug report. Include the following information in your report:
 
 - A clear and descriptive title.
 - Steps to reproduce the issue.
@@ -30,10 +30,10 @@ We welcome pull requests that address issues, add new features, or improve exist
 
 ## Code of Conduct
 
-Please note that GeoVendor Finder has a [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
+Please note that findvend has a [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
 
 ## Getting Help
 
-If you need help or have questions about contributing, feel free to reach out to us through [GitHub Issues](https://github.com/1kemuefuna/vendfinder/issues).
+If you need help or have questions about contributing, feel free to reach out to us through [GitHub Issues](https://github.com/1kemuefuna/findvend/issues).
 
-Thank you for contributing to GeoVendor Finder!
+Thank you for contributing to findvend!
