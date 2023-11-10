@@ -40,12 +40,17 @@ FindVend is a location-based project that simplifies the process of finding vend
 
    ```bash
    git clone https://github.com/1kemuefuna/findvend.git
+2. Install npm packages:
 
-2. Open `index.html` in a web browser.
+    ```bash
+    yarn install
+3. Start the app with:
 
-3. Allow location access when prompted.
+    ```bash
+    yarn start
+4. Allow location access when prompted.
 
-4. Select a vendor category and explore the closest vendors.
+5. Select a vendor category and explore the closest vendors.
 
 ## Contribution Guidelines
 
